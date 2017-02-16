@@ -10,6 +10,7 @@
         "nationality",
         "form",
         "type",
+        "intl",
         "locale",
         "en",
         "fr"
@@ -27,7 +28,8 @@
     },
     "require": {
         "php": ">=5.3.2",
-        "doctrine/common": "~2.4"
+        "doctrine/common": "~2.4",
+        "symfony/intl": "~2.3|~3.0"
     },
     "extra": {
         "branch-alias": {
