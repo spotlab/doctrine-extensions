@@ -13,7 +13,7 @@ class SpotlabHelper
 	{
 		$locale = SpotlabHelper::getLocale($displayLocale);
 
-		$nationalities = getData(SpotlabHelper::NATIONALITY_DIR, $locale);
+		$nationalities = SpotlabHelper::getData(SpotlabHelper::NATIONALITY_DIR, $locale);
 
 		asort($nationalities);
 
@@ -24,7 +24,7 @@ class SpotlabHelper
 	{
 		$locale = SpotlabHelper::getLocale($displayLocale);
 
-		$nationalities = getData(SpotlabHelper::NATIONALITY_DIR, $locale);
+		$nationalities = SpotlabHelper::getData(SpotlabHelper::NATIONALITY_DIR, $locale);
 
 		if (!isset($nationalities[$nationalityCode])) {
 			throw new \Exception('No nationality for code '.$nationalityCode);

@@ -13,6 +13,7 @@ class NationalityType extends AbstractType
     {
         $resolver->setDefaults(array(
             'choices' => SpotlabHelper::getNationalities(),
+            'choice_translation_domain' => false,
         ));
     }
 

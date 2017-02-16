@@ -1,6 +1,6 @@
 <?php
 
-namespace Spotlab\Form\Validator\Constraints;
+namespace Spotlab\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraint;
  */
 class Nationality extends Constraint
 {
-    public $message = 'validator.nationality';
+    public $message = 'Nationality unknown';
 
     public function validatedBy()
     {

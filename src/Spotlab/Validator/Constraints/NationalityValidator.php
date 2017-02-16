@@ -1,6 +1,6 @@
 <?php
 
-namespace Spotlab\Form\Validator\Constraints;
+namespace Spotlab\Validator\Constraints;
 
 use Spotlab\Helper\SpotlabHelper;
 use Symfony\Component\Validator\Constraint;
@@ -21,7 +21,7 @@ class NationalityValidator extends ConstraintValidator
         try {
             $nationality = SpotlabHelper::getNationality($value);
         }
-        catch {
+        catch (\Exception $e) {
             $this->context->addViolation($constraint->message);
         }
     }
