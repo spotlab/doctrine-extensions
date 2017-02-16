@@ -5,7 +5,7 @@ namespace Spotlab\Helper;
 use Symfony\Component\Intl\Locale;
 
 
-public class SpotlabHelper
+class SpotlabHelper
 {
 	const NATIONALITY_DIR = 'nationalities';
 
@@ -18,14 +18,16 @@ public class SpotlabHelper
 			$locale = $displayLocale;
 		}
 
-		$nationalityFile = $this->getDataDirectory().'/'.NATIONALITY_DIR;
+		$nationalityFile = SpotlabHelper::getDataDirectory().'/'.SpotlabHelper::NATIONALITY_DIR.'/'.$locale.'.json';
 		if (!file_exists($nationalityFile)) {
 			throw new \Exception('Nationality file does not exist for locale '.$locale);
 		}
 
-		$nationalities = json_decode(file_get_contents($nationalityFile));
+		$nationalities = json_decode(file_get_contents($nationalityFile), true);
 
-		return asort($nationalities):
+		asort($nationalities);
+
+		return array_flip($nationalities);
 	}
 
 	public static function getDataDirectory()

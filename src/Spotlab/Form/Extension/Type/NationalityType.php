@@ -5,7 +5,7 @@ namespace Spotlab\Form\Extension\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Spotlab\Helper;
+use Spotlab\Helper\SpotlabHelper;
 
 class NationalityType extends AbstractType
 {
