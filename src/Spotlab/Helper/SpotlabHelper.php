@@ -51,11 +51,12 @@ class SpotlabHelper
 
     public static function getLocale($displayLocale = null)
     {
-    	if (empty($displayLocale)) {
-			return Locale::getDefault();
+    	$locale = Locale::getDefault();
+    	if (!empty($displayLocale)) {
+			$locale = $displayLocale;
 		}
-		else {
-			return $displayLocale;
-		}
+
+		// reduce to 2 characters max (to prevent en_GB, en_US, ...)
+		return substr($locale, 0, 2);
     }
 }
