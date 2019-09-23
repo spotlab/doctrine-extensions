@@ -15,7 +15,8 @@ class SpotlabHelper
 
 		$nationalities = SpotlabHelper::getData(SpotlabHelper::NATIONALITY_DIR, $locale);
 
-		asort($nationalities);
+		$coll = collator_create($locale);
+		collator_asort($coll, $nationalities);
 
 		return array_flip($nationalities);
 	}
