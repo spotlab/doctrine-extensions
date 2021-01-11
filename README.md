@@ -14,7 +14,7 @@ This package contains extensions that offer new functionalities. List of extensi
 
 ### Download with composer
 
-	composer require spotlab/doctrine-extentions
+	composer require spotlab/doctrine-extensions
 
 ## Usage
 
